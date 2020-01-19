@@ -18,11 +18,13 @@ export default function Previewer(props){
 const MarkedPreviewer = styled.div`
     padding-left: 10px;
     margin : 10px;
-    height: 100%;
     width: 100%;
-    padding: 2px;
+    height: calc(100% - 20px);
     position: relative;
     overflow-y: scroll;
     flex: 2;
-    border: 1px solid #ddd;
+    border: solid #123 1px;
+    font-size: 18px;
+    padding-left: 20px;
+    font-family: "arial", sans-serif;
 `;
