@@ -17,6 +17,7 @@ export default function Previewer(props){
 
 const MarkedPreviewer = styled.div`
     padding-left: 10px;
+    padding-right: 10px;
     margin : 10px;
     width: 100%;
     height: calc(100% - 20px);

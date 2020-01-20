@@ -17,5 +17,6 @@ const MarkedEditor = styled.textarea`
     flex: 2;
     font-size: 18px;
     padding: 20px;
-    font-family: "arial", sans-serif;
+    font-family: 'Nanum Gothic Coding', monospace;
+    outline: none;
 `;
