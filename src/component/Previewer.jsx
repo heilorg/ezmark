@@ -16,8 +16,8 @@ export default function Previewer(props){
 }
 
 const MarkedPreviewer = styled.div`
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin : 10px;
     width: 100%;
     height: calc(100% - 20px);
@@ -26,6 +26,5 @@ const MarkedPreviewer = styled.div`
     flex: 2;
     border: solid #123 1px;
     font-size: 18px;
-    padding-left: 20px;
     font-family: "arial", sans-serif;
 `;

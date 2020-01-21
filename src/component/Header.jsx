@@ -50,10 +50,10 @@ export default function Header(props) {
                 <Tool title="ctrl + 3" onClick={() => props.onButtonClick("3")} >
                     <FontAwesomeIcon icon={faHeading} />3
                 </Tool>
-                <Tool onClick={() => props.onButtonClick("ul")} >
+                <Tool title="ctrl + u" onClick={() => props.onButtonClick("u")} >
                     <FontAwesomeIcon icon={faListUl} />
                 </Tool>
-                <Tool onClick={() => props.onButtonClick("ol")} >
+                <Tool title="ctrl + o" onClick={() => props.onButtonClick("o")} >
                     <FontAwesomeIcon icon={faListOl} />
                 </Tool>
                 <Tool onClick={() => props.onButtonClick("cl1")} >

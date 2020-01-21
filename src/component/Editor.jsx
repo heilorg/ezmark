@@ -4,7 +4,14 @@ import styled from "styled-components";
 
 export default function Editor(props) {
     return (
-        <MarkedEditor id="editor" value={props.value} onChange={props.onChange} onKeyDown={props.onKeyDown} />
+        <MarkedEditor 
+            id="editor" 
+            value={props.value}
+            onChange={props.onChange} 
+            onKeyDown={props.onKeyDown}
+            onBlur={props.onEditorBlur}
+            autoFocus="true"
+        />
     );
 }
 
