@@ -29,14 +29,18 @@ export default class Effect{
         let text = editor.value.substring(startIndex, endIndex);
         let replaceText = setting.frontSet + text + setting.backSet;
 
-        editor.value = this.replaceText(editor.value, startIndex, endIndex, replaceText);
+        if (!document.execCommand('insertText', false, replaceText)) {
+            editor.setRangeText(replaceText);
+            console.log("editor");
+        }
+        // editor.value = this.replaceText(editor.value, startIndex, endIndex, replaceText);
         editor.selectionStart = startIndex + setting.frontSet.length;
         editor.selectionEnd = startIndex + setting.frontSet.length + text.length;
         return true;
     }
     
 
-    static replaceText(text, StartIndex, EndIndex, character){
-        return text.substr(0, StartIndex) + character + text.substr(EndIndex, character.length);
-    }
+    // static replaceText(text, StartIndex, EndIndex, character){
+    //     return text.substr(0, StartIndex) + character + text.substr(EndIndex, character.length);
+    // }
 }

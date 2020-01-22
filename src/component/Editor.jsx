@@ -5,12 +5,11 @@ import styled from "styled-components";
 export default function Editor(props) {
     return (
         <MarkedEditor 
-            id="editor" 
-            value={props.value}
+            id="editor"
             onChange={props.onChange} 
             onKeyDown={props.onKeyDown}
             onBlur={props.onEditorBlur}
-            autoFocus="true"
+            autoFocus
         />
     );
 }

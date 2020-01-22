@@ -11,13 +11,9 @@ export default class MarkdownEditorUI extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            text: "",
-            history : [
-                {text: ""},
-            ],
-            now: 0,
-            end: 0,
+            text: ""
         };
+        
         this.onChangeText = this.onChangeText.bind(this);
         this.onKeyDown = this.onKeyDown.bind(this);
         this.onButtonClick = this.onButtonClick.bind(this);
@@ -25,20 +21,8 @@ export default class MarkdownEditorUI extends React.Component{
     }
 
     onChangeText(e){
-        let {history, now, end} = this.state;
-        if(history[now + 1] === undefined || (history[now + 1] !== undefined && e.target.value !== history[now + 1].text)){
-            // 이변 칸의 데이터가 존재하지 않을 때
-            // 이변 칸의 데이터가 들어온 데이터와 일치할 때
-            now += 1;
-            end = now;
-            history = history.filter((x, idx) => idx < now);
-            history = history.concat({text: e.target.value});
-        }
         this.setState({
-            text: e.target.value,
-            history: history,
-            now: now,
-            end: end
+            text: e.target.value
         });
     }
 
@@ -46,27 +30,10 @@ export default class MarkdownEditorUI extends React.Component{
         if(e.ctrlKey){
             if(Effect.set(e.key, e.target)){
                 e.preventDefault();
-            }
+            }else
             if(e.key === "s"){
                 e.preventDefault();
                 this.saveFile(e.target.value);
-            }
-            if(e.key === "z"){
-                let {now, history} = this.state;
-                now = (now - 1) < 0 ? now : now - 1;
-                this.setState({
-                    text: history[now].text,
-                    now
-                });
-            }
-            if(e.key === "y"){
-                let {now, end, history} = this.state;
-                
-                now = (now + 1) > end ? now : now + 1;
-                this.setState({
-                    text: history[now].text,
-                    now,
-                });
             }
         }
         if(e.key === "Tab")e.preventDefault();
@@ -98,10 +65,8 @@ export default class MarkdownEditorUI extends React.Component{
                 <Header onButtonClick={this.onButtonClick} />
                 <MarkdownEditor>
                     <Editor 
-                        value={this.state.text} 
                         onChange={this.onChangeText} 
                         onKeyDown={this.onKeyDown} 
-                        onEditorLoad={this.onEditorLoad}
                         onEditorBlur={this.onEditorBlur}
                     />
                     <Previewer value={this.state.text} />
