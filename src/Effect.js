@@ -7,7 +7,7 @@ export default class Effect{
         {name: "b", frontSet: "**", backSet: "**"},
         {name: "i", frontSet: "*", backSet: "*"},
         {name: "q", frontSet: "\n> ", backSet: "\n"},
-        {name: "m", frontSet: "~", backSet: "~"},
+        {name: "m", frontSet: "~~", backSet: "~~"},
         {name: "u", frontSet: "\n* ", backSet: "\n"},
         {name: "o", frontSet: "\n1. ", backSet: "\n"},
         {name: "cl1", frontSet: "\n* [ ] ", backSet: "\n"},
@@ -31,7 +31,6 @@ export default class Effect{
 
         if (!document.execCommand('insertText', false, replaceText)) {
             editor.setRangeText(replaceText);
-            console.log("editor");
         }
         // editor.value = this.replaceText(editor.value, startIndex, endIndex, replaceText);
         editor.selectionStart = startIndex + setting.frontSet.length;
