@@ -28,7 +28,7 @@ export default class MarkdownEditorUI extends React.Component {
 
     onKeyDown(e) {
         if (e.ctrlKey) {
-            if (Effect.set(e)) {
+            if (Effect.set(e.key, e.target)) {
                 e.preventDefault();
             } else if (e.key === "s") {
                 e.preventDefault();
