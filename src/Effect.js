@@ -5,18 +5,18 @@ export default class Effect{
         {name: "3", frontSet: "\n### ", backSet: "\n"},
         {name: "heading", frontSet: "", backSet: "\n----------"},
         {name: "b", frontSet: "**", backSet: "**"},
-        {name: "i", frontSet: "*", backSet: "*"},
+        {name: "i", frontSet: "_", backSet: "_"},
         {name: "q", frontSet: "\n> ", backSet: "\n"},
         {name: "m", frontSet: "~~", backSet: "~~"},
         {name: "u", frontSet: "\n* ", backSet: "\n"},
         {name: "o", frontSet: "\n1. ", backSet: "\n"},
         {name: "cl1", frontSet: "\n* [ ] ", backSet: "\n"},
         {name: "cl2", frontSet: "\n* [x] ", backSet: "\n"},
-        {name: "link", frontSet: "[link](http://example.com)", backSet: ""},
+        {name: "l", frontSet: "[link](http://example.com)", backSet: ""},
         {name: "image", frontSet: "![Alt](img.jpg)", backSet: ""},
         {name: "code", frontSet: "```\n", backSet: "\n```"},
-        {name: "table", frontSet: "Item     | Value\n-------- | -----\nComputer | $1600\nPhone    | $12\nPipe     | $1\n", backSet: "\n"},
-        {name: "line", frontSet: "\n\n-----------------\n\n", backSet: ""},
+        {name: "t", frontSet: "Item     | Value\n-------- | -----\nComputer | $1600\nPhone    | $12\nPipe     | $1\n", backSet: "\n"},
+        {name: "n", frontSet: "\n\n-----------------\n\n", backSet: ""},
     ];
 
     static set(name, editor){

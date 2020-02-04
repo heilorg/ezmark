@@ -62,16 +62,16 @@ export default function Header(props) {
                 <Tool onClick={() => props.onButtonClick("cl2")} >
                     <FontAwesomeIcon icon={faCheckSquare} />
                 </Tool>
-                <Tool onClick={() => props.onButtonClick("line")} >
+                <Tool title="ctrl + n" onClick={() => props.onButtonClick("n")} >
                     <FontAwesomeIcon icon={faGripLines} />
                 </Tool>
                 <Tool onClick={() => props.onButtonClick("code")} >
                     <FontAwesomeIcon icon={faCode} />
                 </Tool>
-                <Tool onClick={() => props.onButtonClick("table")} >
+                <Tool title="ctrl + t" onClick={() => props.onButtonClick("t")} >
                     <FontAwesomeIcon icon={faTable} />
                 </Tool>
-                <Tool onClick={() => props.onButtonClick("link")} >
+                <Tool title="ctrl + l" onClick={() => props.onButtonClick("l")} >
                     <FontAwesomeIcon icon={faLink} />
                 </Tool>
                 <Tool onClick={() => props.onButtonClick("image")} >
