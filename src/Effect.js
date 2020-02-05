@@ -12,16 +12,19 @@ import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { faTable } from "@fortawesome/free-solid-svg-icons";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
 import { faCheckSquare } from "@fortawesome/free-regular-svg-icons";
+import { faDiceOne } from "@fortawesome/free-solid-svg-icons";
+import { faDiceTwo } from "@fortawesome/free-solid-svg-icons";
+import { faDiceThree } from "@fortawesome/free-solid-svg-icons";
 
 export default class Effect {
     static effect = [
         { name: "b", icon: faBold, frontSet: "**", backSet: "**" },
         { name: "i", icon: faItalic, frontSet: "_", backSet: "_" },
-        { name: "q", icon: faStrikethrough, frontSet: "\n> ", backSet: "\n" },
-        { name: "m", icon: faChevronRight, frontSet: "~~", backSet: "~~" },
-        { name: "1", icon: faHeading, frontSet: "\n# ", backSet: "\n" },
-        { name: "2", icon: faHeading, frontSet: "\n## ", backSet: "\n" },
-        { name: "3", icon: faHeading, frontSet: "\n### ", backSet: "\n" },
+        { name: "m", icon: faStrikethrough, frontSet: "~~", backSet: "~~" },
+        { name: "q", icon: faChevronRight, frontSet: "\n> ", backSet: "\n" },
+        { name: "1", icon: faDiceOne, frontSet: "\n# ", backSet: "\n" },
+        { name: "2", icon: faDiceTwo, frontSet: "\n## ", backSet: "\n" },
+        { name: "3", icon: faDiceThree, frontSet: "\n### ", backSet: "\n" },
         {
             name: "heading",
             icon: faHeading,
